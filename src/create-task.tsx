@@ -1,4 +1,14 @@
-import { Form, ActionPanel, Action, showToast, Toast, Icon, open, environment, popToRoot } from "@raycast/api";
+import {
+  Form,
+  ActionPanel,
+  Action,
+  showToast,
+  Toast,
+  Icon,
+  open,
+  environment,
+  popToRoot,
+} from "@raycast/api";
 import { useState, useEffect } from "react";
 import { temboAPI, TEMBO_UI_BASE, CodeRepository } from "./api";
 
@@ -95,7 +105,11 @@ export default function Command() {
     <Form
       actions={
         <ActionPanel>
-          <Action.SubmitForm onSubmit={handleSubmit} icon={Icon.Code} title="Create Task" />
+          <Action.SubmitForm
+            onSubmit={handleSubmit}
+            icon={Icon.Code}
+            title="Create Task"
+          />
           <Action
             title="Open Tembo Web"
             icon={Icon.Globe}
@@ -105,16 +119,27 @@ export default function Command() {
         </ActionPanel>
       }
     >
-      <Form.TextArea id="taskAssignment" title="Task Assignment" placeholder="Assign a task to Tembo" />
+      <Form.TextArea
+        id="taskAssignment"
+        title="Task Assignment"
+        placeholder="Assign a task to Tembo"
+      />
 
       <Form.Dropdown
         id="repository"
         title="Repository"
         isLoading={isLoadingRepos}
-        placeholder={isLoadingRepos ? "Loading repositories..." : "Select a repository"}
+        placeholder={
+          isLoadingRepos ? "Loading repositories..." : "Select a repository"
+        }
       >
         {repositories.map((repo) => (
-          <Form.Dropdown.Item key={repo.id} value={repo.id} title={repo.name} icon={getGitHubIcon()} />
+          <Form.Dropdown.Item
+            key={repo.id}
+            value={repo.id}
+            title={repo.name}
+            icon={getGitHubIcon()}
+          />
         ))}
       </Form.Dropdown>
 
