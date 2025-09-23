@@ -47,9 +47,7 @@ async function tool(input: Input) {
         success: true,
         tasks: [],
         totalCount: 0,
-        message: repository
-          ? `No tasks found for repository "${repository}".`
-          : `No tasks found.`,
+        message: repository ? `No tasks found for repository "${repository}".` : `No tasks found.`,
       };
     }
 
