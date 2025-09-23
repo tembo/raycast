@@ -15,10 +15,16 @@ async function fetchIssues(): Promise<Issue[]> {
       pageSize: 20,
     });
 
-    issues.sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
-    );
+    issues.sort((a, b) => {
+      const aQueuedAt = a.lastQueuedAt ? new Date(a.lastQueuedAt).getTime() : 0;
+      const bQueuedAt = b.lastQueuedAt ? new Date(b.lastQueuedAt).getTime() : 0;
+
+      if (aQueuedAt !== bQueuedAt) {
+        return bQueuedAt - aQueuedAt; // Descending order (most recent first)
+      }
+
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    });
     return issues;
   } catch (error) {
     console.error("Failed to fetch issues for menubar:", error);
