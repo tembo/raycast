@@ -1,12 +1,7 @@
 import { Icon, MenuBarExtra, open } from "@raycast/api";
 import { useCachedPromise } from "@raycast/utils";
 import { temboAPI, TEMBO_UI_BASE, type Issue } from "./api";
-import {
-  getIssueStatus,
-  getIssueIntegrationType,
-  getIssueRepo,
-  getIntegrationIcon,
-} from "./issue-utils";
+import { getIssueStatus, getIssueIntegrationType, getIssueRepo, getIntegrationIcon } from "./issue-utils";
 
 async function fetchIssues(): Promise<Issue[]> {
   try {
@@ -46,9 +41,7 @@ export default function MenubarTasks() {
     return status === "open" || status === "queued";
   });
 
-  const failedIssues = issues.filter(
-    (issue) => getIssueStatus(issue) === "failed",
-  );
+  const failedIssues = issues.filter((issue) => getIssueStatus(issue) === "failed");
 
   const recentlyCompleted = issues.filter((issue) => {
     const status = getIssueStatus(issue);
