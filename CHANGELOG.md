@@ -6,4 +6,4 @@
 - Changes the author to now be @tembo
 - Improved sorting of tasks
 
-## [Initial Version] - 2025-09-11
+## [Initial Version] - {PR_MERGE_DATE}
