@@ -2,7 +2,15 @@ import { environment, Icon } from "@raycast/api";
 import type { Issue } from "./api";
 
 export type IssueStatus = "queued" | "open" | "closed" | "merged" | "failed";
-export type IntegrationType = "github" | "postgres" | "sentry" | "linear" | "jira" | "supabase" | "user-supplied" | "other";
+export type IntegrationType =
+  | "github"
+  | "postgres"
+  | "sentry"
+  | "linear"
+  | "jira"
+  | "supabase"
+  | "user-supplied"
+  | "other";
 
 export function getIssueStatus(issue: Issue): IssueStatus {
   if (issue.solutions && issue.solutions.length > 0) {
