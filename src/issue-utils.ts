@@ -10,6 +10,7 @@ export type IntegrationType =
   | "jira"
   | "supabase"
   | "user-supplied"
+  | "slack"
   | "other";
 
 export function getIssueStatus(issue: Issue): IssueStatus {
@@ -91,6 +92,8 @@ export function getIntegrationIcon(integrationType: IntegrationType) {
       return { source: "supabase.png" };
     case "user-supplied":
       return Icon.Person;
+    case "slack":
+      return { source: "slack.png" };
     default:
       return Icon.QuestionMark;
   }
