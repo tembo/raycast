@@ -59,7 +59,6 @@ export default function ViewTasks() {
     };
 
     fetchIssues();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getFilteredIssues = (issues: Issue[], filter: FilterType) => {

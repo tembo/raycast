@@ -38,7 +38,6 @@ export default function MenubarTasks() {
 
   useEffect(() => {
     fetchIssues();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const activeIssues = issues.filter((issue) => {
