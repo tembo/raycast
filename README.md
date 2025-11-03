@@ -75,3 +75,5 @@ To use this extension, you'll need to:
 ### Configuration
 
 Configure your Tembo API key in Raycast preferences during development. You can find your API key in your Tembo dashboard under Settings → API Keys.
+
+test issue for raycast
