@@ -1,17 +1,17 @@
 # Tembo
 
-Create and manage coding tasks directly from Raycast. Quickly delegate development work to Tembo agents, track progress across repositories, and monitor task status from your menubar.
+The automation layer for engineering teams — now in Raycast. Tag Tembo to delegate tasks, track progress across repositories, and monitor work from your menubar. Stay in your tools while Tembo orchestrates signals into work.
 
 ## Features
 
 ### Commands
-* **Create Task** - Create a new task in Tembo
-* **View Tasks** - View and filter all tasks in your organization with search functionality
-* **Tembo in Menubar** - Show your tasks in the menubar for quick access
+* **Create Task** - Just tag Tembo with a task — delegate work naturally from Raycast
+* **View Tasks** - Track progress across all repos with search and filtering
+* **Tembo in Menubar** - Monitor task status without leaving your workflow
 
 ### Tools
-* **Create Tembo Task** - Creates a task in Tembo with the given prompt and optional repository information.
-* **View Tembo Tasks** - Retrieves and displays tasks from Tembo, with optional filtering by repository, view type (all, backlog, waiting), and other criteria.
+* **Create Tembo Task** - Orchestrate automation by creating tasks with natural language prompts
+* **View Tembo Tasks** - Stay in sync with work status across your organization and repositories
 
 ## Setup
 
