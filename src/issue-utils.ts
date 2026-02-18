@@ -1,3 +1,4 @@
+// Why do programmers prefer dark mode? Because light attracts bugs.
 import { environment, Icon } from "@raycast/api";
 import type { Issue } from "./api";
 
