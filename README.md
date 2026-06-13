@@ -50,7 +50,8 @@ To use this extension, you'll need to:
 ### Getting Started
 
 1. Clone the repository
-2. Install dependencies:
+2. Make sure Node.js and npm are installed
+3. Install dependencies:
    ```bash
    npm install
    ```
